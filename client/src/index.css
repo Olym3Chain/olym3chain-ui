@@ -1,0 +1,216 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: hsl(0, 0%, 100%);
+  --foreground: hsl(20, 14.3%, 4.1%);
+  --muted: hsl(60, 4.8%, 95.9%);
+  --muted-foreground: hsl(25, 5.3%, 44.7%);
+  --popover: hsl(0, 0%, 100%);
+  --popover-foreground: hsl(20, 14.3%, 4.1%);
+  --card: hsl(0, 0%, 100%);
+  --card-foreground: hsl(20, 14.3%, 4.1%);
+  --border: hsl(20, 5.9%, 90%);
+  --input: hsl(20, 5.9%, 90%);
+  --primary: hsl(207, 90%, 54%);
+  --primary-foreground: hsl(211, 100%, 99%);
+  --secondary: hsl(60, 4.8%, 95.9%);
+  --secondary-foreground: hsl(24, 9.8%, 10%);
+  --accent: hsl(60, 4.8%, 95.9%);
+  --accent-foreground: hsl(24, 9.8%, 10%);
+  --destructive: hsl(0, 84.2%, 60.2%);
+  --destructive-foreground: hsl(60, 9.1%, 97.8%);
+  --ring: hsl(20, 14.3%, 4.1%);
+  --radius: 0.5rem;
+  
+  /* OLYM3 Custom Colors */
+  --olym3-blue: hsl(221, 100%, 50%);
+  --olym3-blue-dark: hsl(225, 83%, 37%);
+  --olym3-blue-light: hsl(217, 91%, 60%);
+  --olym3-blue-lighter: hsl(213, 94%, 68%);
+  --olym3-emerald: hsl(160, 84%, 39%);
+  --olym3-amber: hsl(43, 96%, 49%);
+  --olym3-gray-dark: hsl(220, 26%, 14%);
+  --olym3-gray: hsl(215, 13%, 42%);
+  --olym3-gray-light: hsl(210, 20%, 98%);
+}
+
+.dark {
+  --background: hsl(240, 10%, 3.9%);
+  --foreground: hsl(0, 0%, 98%);
+  --muted: hsl(240, 3.7%, 15.9%);
+  --muted-foreground: hsl(240, 5%, 64.9%);
+  --popover: hsl(240, 10%, 3.9%);
+  --popover-foreground: hsl(0, 0%, 98%);
+  --card: hsl(240, 10%, 3.9%);
+  --card-foreground: hsl(0, 0%, 98%);
+  --border: hsl(240, 3.7%, 15.9%);
+  --input: hsl(240, 3.7%, 15.9%);
+  --primary: hsl(207, 90%, 54%);
+  --primary-foreground: hsl(211, 100%, 99%);
+  --secondary: hsl(240, 3.7%, 15.9%);
+  --secondary-foreground: hsl(0, 0%, 98%);
+  --accent: hsl(240, 3.7%, 15.9%);
+  --accent-foreground: hsl(0, 0%, 98%);
+  --destructive: hsl(0, 62.8%, 30.6%);
+  --destructive-foreground: hsl(0, 0%, 98%);
+  --ring: hsl(240, 4.9%, 83.9%);
+  --radius: 0.5rem;
+  
+  /* OLYM3 Dark Mode Colors */
+  --olym3-gray-light: hsl(240, 3.7%, 15.9%);
+  --olym3-gray-dark: hsl(0, 0%, 98%);
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply font-sans antialiased bg-background text-foreground;
+    font-family: 'Inter', sans-serif;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@layer utilities {
+  .text-olym3-blue {
+    color: var(--olym3-blue);
+  }
+  
+  .text-olym3-blue-dark {
+    color: var(--olym3-blue-dark);
+  }
+  
+  .text-olym3-blue-light {
+    color: var(--olym3-blue-light);
+  }
+  
+  .text-olym3-emerald {
+    color: var(--olym3-emerald);
+  }
+  
+  .text-olym3-amber {
+    color: var(--olym3-amber);
+  }
+  
+  .text-olym3-gray-dark {
+    color: var(--olym3-gray-dark);
+  }
+  
+  .text-olym3-gray {
+    color: var(--olym3-gray);
+  }
+  
+  .bg-olym3-blue {
+    background-color: var(--olym3-blue);
+  }
+  
+  .bg-olym3-blue-dark {
+    background-color: var(--olym3-blue-dark);
+  }
+  
+  .bg-olym3-blue-light {
+    background-color: var(--olym3-blue-light);
+  }
+  
+  .bg-olym3-emerald {
+    background-color: var(--olym3-emerald);
+  }
+  
+  .bg-olym3-amber {
+    background-color: var(--olym3-amber);
+  }
+  
+  .bg-olym3-gray-light {
+    background-color: var(--olym3-gray-light);
+  }
+  
+  .bg-olym3-gray-dark {
+    background-color: var(--olym3-gray-dark);
+  }
+  
+  .border-olym3-blue {
+    border-color: var(--olym3-blue);
+  }
+  
+  .border-olym3-emerald {
+    border-color: var(--olym3-emerald);
+  }
+  
+  .border-olym3-amber {
+    border-color: var(--olym3-amber);
+  }
+  
+  .hover\:bg-olym3-blue-dark:hover {
+    background-color: var(--olym3-blue-dark);
+  }
+  
+  .hover\:text-olym3-blue:hover {
+    color: var(--olym3-blue);
+  }
+  
+  .gradient-olym3 {
+    background: linear-gradient(135deg, var(--olym3-blue) 0%, var(--olym3-blue-dark) 100%);
+  }
+  
+  .gradient-olym3-amber {
+    background: linear-gradient(135deg, var(--olym3-amber) 0%, #facc15 100%);
+  }
+  
+  .gradient-olym3-emerald {
+    background: linear-gradient(135deg, var(--olym3-emerald) 0%, #22c55e 100%);
+  }
+}
+
+/* Animation utilities */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.6s ease-out;
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: hsl(210, 20%, 98%);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--olym3-blue);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--olym3-blue-dark);
+}
